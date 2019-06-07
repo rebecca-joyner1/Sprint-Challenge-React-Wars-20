@@ -10,19 +10,19 @@ const  Character= (props) => {
         <div className='character'>
             
             <h1>Name:</h1>
-              <p>{props.Character.name}</p>
+              <p>{props.Characters.name}</p>
             
             <h1>Birth Year:</h1>
-              <p>{props.Character.birth_year}</p>
+              <p>{props.Characters.birth_year}</p>
 
             <h1>Gender:</h1>
-            <p>{props.Character.gender}</p>
+            <p>{props.Characters.gender}</p>
 
             <h1>Eye Color</h1>
-            <p>{props.Character.eye_color}</p>
+            <p>{props.Characters.eye_color}</p>
 
             <h1>Hair Color</h1>
-            <p>{props.Character.hair_color}</p>
+            <p>{props.Characters.hair_color}</p>
             
         </div>
     );
