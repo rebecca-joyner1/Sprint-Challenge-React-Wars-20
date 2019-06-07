@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './StarWars.css';
+import './components/StarWars.css';
 
 
 
