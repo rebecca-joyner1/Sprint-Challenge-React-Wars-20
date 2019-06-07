@@ -7,12 +7,14 @@ import Characters from './Characters';
 
 const StarWarsMap = (props) => {
     return (
-        <div className="star-map">
+   
+<div>
+        {props.starwarsChars.map (Character => <Character Characters = {character} />)}
 
-            {props.characters.map(character => <Characters character={character} />)}
-            
-        </div>
+    </div>
+    
     );
 };
 
 export default StarWarsMap;
+
