@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import StarWarsMap from './StarWarsMap';
-import Characters from './Characters';
+
 
 
 class App extends Component {
