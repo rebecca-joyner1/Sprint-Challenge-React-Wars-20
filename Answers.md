@@ -12,23 +12,22 @@ What is React JS and what problems does it try and solve? Support your answer wi
 
 
 
-
-
  Describe state.
 
-
+※ 
 
 
 
  Describe props.
 
+※ 
 
 
 
 
  What are side effects, and how do you sync effects in a React component to state or prop changes?
 
-
+※ 
 
 
 
