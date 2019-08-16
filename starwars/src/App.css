@@ -1,8 +1,33 @@
 .App {
   text-align: center;
+  align-items: center;
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: goldenrod;
+  font-size: 3rem;
 }
 /* write your parent styles in here for your App.js */
+
+
+h3 {
+
+  font-size: 1.4rem;
+text-decoration: underline;
+text-decoration-style: wavy;
+text-decoration-color: #ffe800;
+}
+
+p {
+  font-size: 1rem;
+
+}
+
+u {
+
+  text-decoration-color: #1FA500;
+  text-decoration-style: dashed;
+}

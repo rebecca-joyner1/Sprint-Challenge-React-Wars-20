@@ -1,48 +1,43 @@
-import React, { Component } from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import StarWarsMap from './StarWarsMap';
+
+import Characters from './components/Characters';
+
+import styled from 'styled-components';
+
+import axios from "axios";
 
 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      starwarsChars: [],
-    };
-  }
+const App = () => {
 
-  componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
-  }
-
-  getCharacters = URL => {
-    // feel free to research what this code is doing.
-    // At a high level we are calling an API to fetch some starwars data from the open web.
-    // We then take that data and resolve it our state.
-    fetch(URL)
+  const [character, setData] = useState();
+  useEffect(() => {
+    axios.get("https://swapi.co/api/people")
       .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        this.setState({ starwarsChars: data.results });
-      })
-      .catch(err => {
-        throw new Error(err);
-      });
-  };
+        setData(res.data.results);
 
-  render() {
-    return (
-      <div className="App">
-        <h1 className="Header">React Wars</h1>
+      }, []);
 
-      <StarWarsMap starwarsChars = {this.state.starwarsChars} />
-      
+  });
 
-      </div>
-    );
+
+  if (!character) {
+    return <h1>loading</h1>
+    } else {
+      return (
+        <div className="App">
+          <h1 className="Header">React Wars</h1>
+    
+          
+          {Characters.name}
+    
+    {character.map((characters) => <Characters person = {characters} /> )}
+        </div>
+      );
   }
-}
+  
+  }
+
 
 export default App;
